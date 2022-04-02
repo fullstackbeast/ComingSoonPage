@@ -18,7 +18,7 @@ function App() {
           </div>
 
           <div className='left-section-body'>
-            <img id='bg-image' src={BgImage} />
+            <img id='bg-image' alt='cta' src={BgImage} />
           </div>
 
           <div className='left-section-footer'>
