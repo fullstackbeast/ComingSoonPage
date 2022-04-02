@@ -1,25 +1,91 @@
-import logo from './logo.svg';
+import Countdown from 'react-countdown';
+import {BsFacebook, BsTwitter, BsLinkedin} from 'react-icons/bs';
 import './App.css';
+
+import BgImage from './images/BgImage.svg'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <div className='container'>
+
+        <div className='left-section'>
+
+          <div className='left-section-header'>
+            <h1>COMING SOON</h1>
+            <p>Stay Connected, Stay Updated</p>
+          </div>
+
+          <div className='left-section-body'>
+            <img id='bg-image' src={BgImage} />
+          </div>
+
+          <div className='left-section-footer'>
+          </div>
+
+        </div>
+
+        <div className='right-section'>
+
+          <div className='right-section-body'>
+            <Countdown
+              date={new Date('4,10,2022')}
+              renderer={renderer}
+            />
+            <hr id='horizontal' />
+
+            <div>
+              <h1>Get Updates!</h1>
+
+              <div className='email-sub-container'>
+                <input type='email' placeholder='Email Address' />
+                <button>Subscribe</button>
+              </div>
+
+            </div>
+          </div>
+
+          <div className='right-section-footer'>
+            <BsFacebook/>
+            <BsTwitter/>
+            <BsLinkedin/>
+          </div>
+
+
+
+        </div>
+      </div>
+
     </div>
   );
 }
+
+
+const renderer = ({ days, hours, minutes, seconds, completed }) => {
+  if (completed) {
+
+    return <h1>Completed</h1>
+  } else {
+    return (
+      <div className='date-item-container'>
+        <DateItem value={days} label='Days' />
+        <DateItem value={hours} label='Hours' />
+        <DateItem value={minutes} label='Minutes' />
+        <DateItem value={seconds} label='Seconds' />
+      </div>
+    )
+  }
+};
+
+const DateItem = ({ value, label }) => {
+  return (
+    <div className='date-item'>
+      <div className='date-item-value'>{value}</div>
+      <div className='date-item-label'>{label}</div>
+    </div>
+  )
+}
+
 
 export default App;
