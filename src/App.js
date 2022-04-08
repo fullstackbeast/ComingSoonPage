@@ -1,5 +1,5 @@
 import Countdown from 'react-countdown';
-import {BsFacebook, BsTwitter, BsLinkedin} from 'react-icons/bs';
+import { BsFacebook, BsTwitter, BsLinkedin } from 'react-icons/bs';
 import './App.css';
 
 import BgImage from './images/BgImage.svg'
@@ -30,7 +30,7 @@ function App() {
 
           <div className='right-section-body'>
             <Countdown
-              date={new Date('4,10,2022')}
+              date={new Date('6,1,2022')}
               renderer={renderer}
             />
             <hr id='horizontal' />
@@ -47,9 +47,14 @@ function App() {
           </div>
 
           <div className='right-section-footer'>
-            <BsFacebook/>
-            <BsTwitter/>
-            <BsLinkedin/>
+            <a href='https://twitter.com/JsEvans'>
+              <BsTwitter />
+            </a>
+
+            <a href='https://www.linkedin.com/in/christopher-evans-3858b6207/'>
+              <BsLinkedin />
+            </a>
+            <BsFacebook />
           </div>
 
 

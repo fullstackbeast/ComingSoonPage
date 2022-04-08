@@ -126,3 +126,14 @@
   color: white;
   font-size: 24px;
 }
+
+.right-section-footer a{
+  color: white;
+  text-decoration: none;
+}
+
+.right-section-footer a:hover{
+  transition: .5s;
+  transform: translateY(-5px);
+}
+
