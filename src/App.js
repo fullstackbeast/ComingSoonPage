@@ -1,5 +1,5 @@
 import Countdown from 'react-countdown';
-import { BsFacebook, BsTwitter, BsLinkedin } from 'react-icons/bs';
+import { BsFacebook, BsTwitter, BsLinkedin, BsEnvelopeFill } from 'react-icons/bs';
 import './App.css';
 
 import BgImage from './images/BgImage.svg'
@@ -47,6 +47,12 @@ function App() {
           </div>
 
           <div className='right-section-footer'>
+
+            <div className='email-container'>
+              <BsEnvelopeFill />
+              <a href="mailto:realchrisevans@outlook.com?subject=Get In Touch">realchrisevans@outlook.com</a>  
+           
+            </div>
             <a href='https://twitter.com/JsEvans'>
               <BsTwitter />
             </a>
